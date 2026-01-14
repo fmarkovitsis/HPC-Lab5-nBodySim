@@ -2,14 +2,16 @@
 HPC - LAB5
 
 Garyfallia Anastasia Papadouli — 03533
-Student Filippos Markovitsis — 03488
-Student Israel Sanchez Cabrera — 04557
+Filippos Markovitsis — 03488
+Israel Sanchez Cabrera — 04557
 ####################################################
 
 Included files:
 	-nbody_omp.c:					The final OpenMP code
 	-nbody_cuda.cu:					The final CUDA code
-	
+
+	-timer.h & gputimer.h			Libraries for measuring time
+
 	-custom_sem.c & custom_sem.h:	Custom semaphore library for pthreads
 
 	-verification.py & avg.py:		Scripts for comparison with golden solution vs our code and calculation of average throughput and execution time
@@ -21,4 +23,5 @@ Included files:
 
 Compilation instructions:
 	-nbody_omp.c:					icx -Ofast nbody_omp.c -o nbody_omp -qopenmp
+
 	-nbody_cuda.cu:					nvcc -O4 nbody_cuda.cu custom_sem.c -o nbody_cuda
